@@ -1,5 +1,6 @@
 class MonstersController < ApplicationController
   before_action :set_monster, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: :create
 
   # GET /monsters
   # GET /monsters.json
